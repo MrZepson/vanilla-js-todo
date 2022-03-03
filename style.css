@@ -1,0 +1,149 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap"); /* font-family: 'Fontdiner Swanky', cursive */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap"); /* font-family: 'Fira Sans', sans-serif; */
+/* End fonts */
+
+/* General */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(229, 229, 229);
+  font-family: "Fira Sans", sans-serif;
+}
+
+.screen {
+  height: 844px;
+  width: 390px;
+}
+/* End general */
+
+/* Header */
+.header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(63, 130, 192);
+}
+
+.logo {
+  font-size: 26px;
+  font-family: "Fontdiner Swanky";
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+/* End header */
+
+/* Todos */
+.todos-container {
+  height: 716px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+}
+
+.todo {
+  height: 4rem;
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.todo:first-child {
+  margin-top: 1.5rem;
+}
+
+.todo-check-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.todo-check {
+  margin: 0 1rem;
+  height: 24px;
+  width: 24px;
+}
+
+.todo-name {
+  font-size: 1.2rem;
+}
+
+.todo-name.checked {
+  color: rgb(151, 151, 151);
+}
+
+.todo-check-label-container.checked::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  border-radius: 1px;
+  background-color: rgb(82, 82, 82);
+  position: absolute;
+  top: 50%;
+  left: 3.2rem;
+  transform: translateY(-50%);
+}
+
+.todo-button {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  border-radius: 50%;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.todo-button:active {
+  background-color: rgb(228, 228, 228);
+}
+/* End todos */
+
+/* Add task */
+.add-task-container {
+  height: 64px;
+  width: 100%;
+  display: flex;
+}
+
+.add-task-input {
+  height: 100%;
+  width: 326px;
+  border: none;
+  background-color: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  padding: 1rem;
+}
+
+.add-task-input::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+}
+
+.add-task-button {
+  height: 100%;
+  width: 64px;
+  border: none;
+  font-size: 2rem;
+  background-color: rgb(63, 192, 138);
+  color: rgb(255, 255, 255);
+}
+/* End add task */
